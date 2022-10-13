@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Alex Herasymchuk</title>
+  <link rel="preload" href="fonts/Stolzl-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Stolzl-Thin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Stolzl-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Stolzl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Stolzl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer="defer" src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container"><a href="#info" class="top-information d-none d-md-flex"
+      style="background-color: #CBDBFF;"><img src="img/info.png" alt="Info"></a>
+    <header class="header">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-xl-2 col-lg-2 mb-lg-0 mb-md-3 mb-2">
+            <div class="navbar"><a href="/" class="header__logo"><img src="img/logo.svg" alt="monvalise"> </a><button
+                class="navbar-toggler p-0 border-0 header__nav-toggler d-lg-none" type="button" id="navbarSideCollapse"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div>
+          </div>
+          <div class="col-xl-6 col-lg-5 col-md-6 col-sm-5 mb-3 mb-sm-0">
+            <form action="#" method="POST">
+              <div class="input-group header__search"><button class="btn header__search-btn"><svg width="18" height="18"
+                    viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.8481 14.0265C11.565 15.0529 9.93751 15.6666 8.16666 15.6666C4.02453 15.6666 0.666664 12.3088 0.666664 8.16663C0.666664 4.02449 4.02453 0.666626 8.16666 0.666626C12.3088 0.666626 15.6667 4.02449 15.6667 8.16663C15.6667 9.93747 15.0529 11.565 14.0266 12.848L17.0893 15.9107L15.9108 17.0892L12.8481 14.0265ZM14 8.16663C14 11.3883 11.3883 14 8.16666 14C4.945 14 2.33333 11.3883 2.33333 8.16663C2.33333 4.94497 4.945 2.33329 8.16666 2.33329C11.3883 2.33329 14 4.94497 14 8.16663Z"
+                      fill="#5C5F60" /></svg></button> <input type="text" class="form-control"
+                  placeholder="Знайти речі або бренди"></div>
+            </form>
+          </div>
+          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
+            <div class="header__box"><button type="button" class="btn btn-dark header__prodplus">Додати товар</button>
+              <div class="btn-group header__lang d-none d-md-block"><a href="#"
+                  class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                  data-bs-display="static" aria-expanded="false">Укр</a>
+                <ul class="dropdown-menu shadow dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">EN</a></li>
+                  <li><a class="dropdown-item" href="#">DE</a></li>
+                </ul>
+              </div>
+              <div class="header__icons">
+                <ul class="nav">
+                  <li><a href="#" class="nav-link"><svg class="bi d-block" width="24" height="24">
+                        <use xlink:href="img/sprite.svg#heart"></use>
+                      </svg> <sup class="count">8</sup></a></li>
+                  <li><a href="#" class="nav-link"><svg class="bi d-block" width="24" height="24">
+                        <use xlink:href="img/sprite.svg#message"></use>
+                      </svg> <sup class="count count--orange">3</sup></a></li>
+                  <li><a href="#" class="nav-link"><svg class="bi d-block" width="24" height="24">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg> <sup class="count">3</sup></a></li>
+                </ul>
+              </div>
+              <div class="dropdown header__cabinet"><a href="#"
+                  class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-expanded="false"><img src="img/ava.jpg" alt="ava" width="32" height="32"
+                    class="rounded-circle"></a>
+                <ul class="dropdown-menu text-small shadow dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg header__nav" aria-label="Main navigation">
+              <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Головна</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="#">Каталог</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Жінкам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Чоловікам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Дитячі речі</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Аукціон</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Бренди</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Акції</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Аутентифікація</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Блог</a></li>
+                </ul>
+                <div class="btn-group header__lang d-md-none"><a href="#"
+                    class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-display="static" aria-expanded="false">Укр</a>
+                  <ul class="dropdown-menu shadow dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">EN</a></li>
+                    <li><a class="dropdown-item" href="#">DE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="breadcrumb-wrap">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb list-reset">
+                  <li class="breadcrumb-item"><a href="#">Головна</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Каталог одягу</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="catalog">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="h1">Каталог одягу</h1>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+              <aside class="catalog__aside">
+                <div class="catalog__aside-title">Фільтри</div>
+                <div class="catalog__aside-box catalog__aside-box--filters">
+                  <div class="accordion" id="accordionFilters">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingCat"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false"
+                          aria-controls="collapseCat">Категорії</button></h2>
+                      <div id="collapseCat" class="accordion-collapse collapse" aria-labelledby="headingCat">
+                        <div class="accordion-body">Категорії body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingPrice"><button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="true"
+                          aria-controls="collapsePrice">Ціна</button></h2>
+                      <div id="collapsePrice" class="accordion-collapse collapse show" aria-labelledby="headingPrice">
+                        <div class="accordion-body">
+                          <div class="filters__item filters-price">
+                            <div class="filters-price__slider" id="range-slider"></div>
+                            <div class="filters-price__inputs"><label class="filters-price__label"><span
+                                  class="filters-price__text">Від</span> <input type="number" min="500" max="999999"
+                                  class="filters-price__input" id="input-0"></label> <label
+                                class="filters-price__label"><span class="filters-price__text">До</span> <input
+                                  type="number" min="500" max="999999" class="filters-price__input"
+                                  id="input-1"></label></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeller"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeller" aria-expanded="false"
+                          aria-controls="collapseSeller">Продавець</button></h2>
+                      <div id="collapseSeller" class="accordion-collapse collapse" aria-labelledby="headingSeller">
+                        <div class="accordion-body">Продавець body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingBrand"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseBrand" aria-expanded="false"
+                          aria-controls="collapseBrand">Бренд</button></h2>
+                      <div id="collapseBrand" class="accordion-collapse collapse" aria-labelledby="headingBrand">
+                        <div class="accordion-body">Бренд body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSex"><button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseSex" aria-expanded="true"
+                          aria-controls="collapseSex">Стать</button></h2>
+                      <div id="collapseSex" class="accordion-collapse collapse show" aria-labelledby="headingSex">
+                        <div class="accordion-body">
+                          <div class="check-filter">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value=""
+                                id="forWomen" checked="checked"> <label class="form-check-label"
+                                for="forWomen">Жінкам</label></div>
+                            <div class="check-filter__count">(64)</div>
+                          </div>
+                          <div class="check-filter">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="forMen"
+                                checked="checked"> <label class="form-check-label" for="forMen">Чоловікам</label></div>
+                            <div class="check-filter__count">(16)</div>
+                          </div>
+                          <div class="check-filter">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value=""
+                                id="forAll"> <label class="form-check-label" for="forAll">Унісекс</label></div>
+                            <div class="check-filter__count">(24)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSize"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseSize" aria-expanded="false"
+                          aria-controls="collapseSize">Розмір</button></h2>
+                      <div id="collapseSize" class="accordion-collapse collapse" aria-labelledby="headingSize">
+                        <div class="accordion-body">Розмір body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingColor"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseColor" aria-expanded="false"
+                          aria-controls="collapseColor">Колір</button></h2>
+                      <div id="collapseColor" class="accordion-collapse collapse" aria-labelledby="headingColor">
+                        <div class="accordion-body">Колір body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingMaterial"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseMaterial"
+                          aria-expanded="false" aria-controls="collapseMaterial">Матеріал</button></h2>
+                      <div id="collapseMaterial" class="accordion-collapse collapse" aria-labelledby="headingMaterial">
+                        <div class="accordion-body">Матеріал body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeason"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeason" aria-expanded="false"
+                          aria-controls="collapseSeason">Сезон</button></h2>
+                      <div id="collapseSeason" class="accordion-collapse collapse" aria-labelledby="headingSeason">
+                        <div class="accordion-body">Сезон body</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingStyle"><button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseStyle" aria-expanded="false"
+                          aria-controls="collapseStyle">Стиль</button></h2>
+                      <div id="collapseStyle" class="accordion-collapse collapse" aria-labelledby="headingStyle">
+                        <div class="accordion-body">Стиль body</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <div class="col-xl-9 col-lg-9">
+              <div class="row">
+                <div class="col-xl-4 col-lg-5 col-md-6 ms-lg-auto ms-md-0">
+                  <div class="input-group input-group--sort"><label class="input-group-text" for="input-sort">Сортувати
+                      за:</label> <select id="input-sort" class="form-select">
+                      <option value="DEFAULT" selected="selected">За замовчуванням</option>
+                      <option value="ASC">За ціною (зростанням)</option>
+                      <option value="DESC">За ціною (зменшенням)</option>
+                    </select></div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- start product 1 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-1.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                        <div class="card__sticker"><span>ТОП</span></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">LOUIS VUITTON</div>
+                      <h5 class="card-title">Темно-сині джинси Louis Vuitton</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">5 499</div>
+                          <div class="card__price-new">3 799</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Херсон</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-1.jpg" alt="Alt"></span><span>LoveBrand</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 2 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-2.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                        <div class="card__sticker"><span>ТОП</span></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">THOM BROWNE</div>
+                      <h5 class="card-title">Чорний піджак Thom Browne</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">11 999</div>
+                          <div class="card__price-new">8 599</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Хмельницький</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-2.jpg" alt="Alt"></span><span>Sell_For_Men</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 3 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-3.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">CANALI</div>
+                      <h5 class="card-title">Вовняний піджак Canali</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">4 999</div>
+                          <div class="card__price-new">2 599</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Хмельницький</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-2.jpg" alt="Alt"></span><span>Sell_For_Men</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 4 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-4.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">LOUIS VUITTON</div>
+                      <h5 class="card-title">Клатч Louis Vuitton Limelight</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">4 999</div>
+                          <div class="card__price-new">3 499</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Дніпро</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-3.jpg" alt="Alt"></span><span>Brandear</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 5 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-5.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                        <div class="card__sticker card__sticker--organic"><span>organic</span></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">ELENA GHISELINI</div>
+                      <h5 class="card-title">Сумка з декором Elena Ghisellini</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">1 999</div>
+                          <div class="card__price-new">1 599</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Дніпро</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-3.jpg" alt="Alt"></span><span>Brandear</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 6 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-6.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">Acne</div>
+                      <h5 class="card-title">Бомбер Acne на блискавці</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">5 999</div>
+                          <div class="card__price-new">4 199</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Київ</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-4.jpg" alt="Alt"></span><span>Alexalex</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 7 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-7.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">Gucci</div>
+                      <h5 class="card-title">Довга сукня Gucci</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">11 999</div>
+                          <div class="card__price-new">8 599</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Рівне</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-5.jpg" alt="Alt"></span><span>SellBuy</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 8 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-8.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">CHANEL</div>
+                      <h5 class="card-title">Помаранчевий бомбер Woolrich</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">1 999</div>
+                          <div class="card__price-new">1 599</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Кропивницький</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-6.jpg" alt="Alt"></span><span>Deeva_Sofia</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- start product 9 -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="card">
+                    <div class="card-head d-block"><a href="#card"><img loading="lazy" src="../img/card-9.jpg"
+                          class="mx-auto d-block" alt="Alt">
+                        <div class="card__favorites"><svg class="card__favorites-icon" width="20" height="20">
+                            <use xlink:href="img/sprite.svg#like"></use>
+                          </svg></div>
+                      </a></div>
+                    <div class="card-body">
+                      <div class="card-brand">HACHE</div>
+                      <h5 class="card-title">Салатове пальто Hache</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="card__price">
+                          <div class="card__price-old">5 999</div>
+                          <div class="card__price-new">4 199</div>
+                        </div>
+                        <div class="card__info">
+                          <div class="card__info-local"><svg class="location-icon" width="12" height="12">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg> <span>Київ</span></div>
+                          <div class="card__info-seller"><span class="seller-ava"><img loading="lazy"
+                                src="../img/avatar-1.jpg" alt="Alt"></span><span>LoveBrand</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <nav class="products-pagination">
+                    <ul class="pagination justify-content-center flex-wrap">
+                      <li class="page-item"><a class="page-link" href="#">Попередня</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">6</a></li>
+                      <li class="page-item"><a class="page-link" href="#">7</a></li>
+                      <li class="page-item"><a class="page-link" href="#">8</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Наступна</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 mb-4">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Довідка для покупців</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Отримати підтримку</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Як купувати</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Як залишити корисний відгук</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Програма Захисту Покупців</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Рекомендації з безпечних покупок</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Довідка для продавців</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Як почати продавати</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Тарифи</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Угода користувача</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Політика конфіденційності</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Правила користування порталом</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Бонусна програма</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Про нас</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Довідка та FAQ</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Захист легальності контенту</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Адміністрація</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Вакансії</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4">
+            <p class="footer-h mb-2">Мобільний додаток</p><a href="#google"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"><img loading="lazy"
+                src="img/google-play.png" alt="Google Play"></a>
+          </div>
+          <div class="col-12">
+            <div class="d-flex flex-column pb-4 pt-5 mt-4 border-top">
+              <p class="footer-copyright mb-0">© 2022 Monvalise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
